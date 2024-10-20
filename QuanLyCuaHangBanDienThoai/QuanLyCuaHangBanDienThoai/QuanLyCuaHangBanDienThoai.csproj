@@ -46,11 +46,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Form_AdminHome.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Form_AdminHome.Designer.cs">
+      <DependentUpon>Form_AdminHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Ban.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Ban.Designer.cs">
+      <DependentUpon>Form_Ban.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_ChiTietHoaDonBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_ChiTietHoaDonBan.Designer.cs">
+      <DependentUpon>Form_ChiTietHoaDonBan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_ChiTietHoaDonNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_ChiTietHoaDonNhap.Designer.cs">
+      <DependentUpon>Form_ChiTietHoaDonNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_DangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_DangNhap.Designer.cs">
+      <DependentUpon>Form_DangNhap.cs</DependentUpon>
     </Compile>
     <Compile Include="Form_HoaDonBan.cs">
       <SubType>Form</SubType>
@@ -78,8 +102,20 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Form_AdminHome.resx">
+      <DependentUpon>Form_AdminHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Ban.resx">
+      <DependentUpon>Form_Ban.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_ChiTietHoaDonBan.resx">
+      <DependentUpon>Form_ChiTietHoaDonBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_ChiTietHoaDonNhap.resx">
+      <DependentUpon>Form_ChiTietHoaDonNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_DangNhap.resx">
+      <DependentUpon>Form_DangNhap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_HoaDonBan.resx">
       <DependentUpon>Form_HoaDonBan.cs</DependentUpon>
@@ -123,6 +159,10 @@
     <ProjectReference Include="..\BusinessLogicLayer\BusinessLogicLayer.csproj">
       <Project>{8058193e-738d-48df-815e-974310eb0142}</Project>
       <Name>BusinessLogicLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataAccessLayer\DataAccessLayer.csproj">
+      <Project>{cc73e84f-d658-4b33-b646-c83a4de68741}</Project>
+      <Name>DataAccessLayer</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

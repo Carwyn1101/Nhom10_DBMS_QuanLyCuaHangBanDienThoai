@@ -1,6 +1,6 @@
 ﻿namespace QuanLyCuaHangBanDienThoai
 {
-    partial class Form1
+    partial class frmAdminHome
     {
         /// <summary>
         /// Required designer variable.
@@ -75,6 +75,7 @@
             this.btnTaiKhoan.Text = "Tài khoản";
             this.btnTaiKhoan.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnTaiKhoan.UseVisualStyleBackColor = true;
+            this.btnTaiKhoan.Click += new System.EventHandler(this.btnTaiKhoan_Click);
             // 
             // btnNhanVien
             // 
@@ -95,6 +96,7 @@
             this.btnNhanVien.Text = "Nhân viên";
             this.btnNhanVien.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnNhanVien.UseVisualStyleBackColor = true;
+            this.btnNhanVien.Click += new System.EventHandler(this.btnNhanVien_Click);
             // 
             // btnDanhMuc
             // 
@@ -115,6 +117,7 @@
             this.btnDanhMuc.Text = "Danh mục";
             this.btnDanhMuc.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDanhMuc.UseVisualStyleBackColor = true;
+            this.btnDanhMuc.Click += new System.EventHandler(this.btnDanhMuc_Click);
             // 
             // btnDoChoi
             // 
@@ -135,6 +138,7 @@
             this.btnDoChoi.Text = "Đồ chơi";
             this.btnDoChoi.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDoChoi.UseVisualStyleBackColor = true;
+            this.btnDoChoi.Click += new System.EventHandler(this.btnDoChoi_Click);
             // 
             // btnNganKe
             // 
@@ -155,6 +159,7 @@
             this.btnNganKe.Text = "Ngăn kệ";
             this.btnNganKe.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnNganKe.UseVisualStyleBackColor = true;
+            this.btnNganKe.Click += new System.EventHandler(this.btnNganKe_Click);
             // 
             // btnNhaSanXuat
             // 
@@ -175,6 +180,7 @@
             this.btnNhaSanXuat.Text = "Nhà sản xuất";
             this.btnNhaSanXuat.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnNhaSanXuat.UseVisualStyleBackColor = true;
+            this.btnNhaSanXuat.Click += new System.EventHandler(this.btnNhaSanXuat_Click);
             // 
             // btnHoaDonNhap
             // 
@@ -195,6 +201,7 @@
             this.btnHoaDonNhap.Text = "Hoá đơn nhập";
             this.btnHoaDonNhap.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnHoaDonNhap.UseVisualStyleBackColor = true;
+            this.btnHoaDonNhap.Click += new System.EventHandler(this.btnHoaDonNhap_Click);
             // 
             // btnThongKe
             // 
@@ -215,6 +222,7 @@
             this.btnThongKe.Text = "Thống kê";
             this.btnThongKe.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnThongKe.UseVisualStyleBackColor = true;
+            this.btnThongKe.Click += new System.EventHandler(this.btnThongKe_Click);
             // 
             // flpNav
             // 
@@ -235,7 +243,7 @@
             this.flpNav.Location = new System.Drawing.Point(0, 91);
             this.flpNav.Margin = new System.Windows.Forms.Padding(4);
             this.flpNav.Name = "flpNav";
-            this.flpNav.Size = new System.Drawing.Size(276, 516);
+            this.flpNav.Size = new System.Drawing.Size(276, 865);
             this.flpNav.TabIndex = 3;
             this.flpNav.WrapContents = false;
             // 
@@ -279,6 +287,7 @@
             this.btnHoaDonBan.Text = "Hoá đơn bán";
             this.btnHoaDonBan.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnHoaDonBan.UseVisualStyleBackColor = true;
+            this.btnHoaDonBan.Click += new System.EventHandler(this.btnHoaDonBan_Click);
             // 
             // pictureBox1
             // 
@@ -374,19 +383,19 @@
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1104, 607);
+            this.panel2.Size = new System.Drawing.Size(1104, 956);
             this.panel2.TabIndex = 5;
             // 
-            // Form1
+            // frmAdminHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1104, 607);
+            this.ClientSize = new System.Drawing.Size(1104, 956);
             this.Controls.Add(this.flpNav);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "frmAdminHome";
+            this.Text = "Form_AdminHome";
             this.flpNav.ResumeLayout(false);
             this.flpNav.PerformLayout();
             this.panel3.ResumeLayout(false);

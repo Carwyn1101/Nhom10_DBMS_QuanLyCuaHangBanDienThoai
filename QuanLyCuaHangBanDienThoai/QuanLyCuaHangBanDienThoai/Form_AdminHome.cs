@@ -20,8 +20,8 @@ namespace QuanLyCuaHangBanDienThoai
 
         private void btnNhanVien_Click(object sender, EventArgs e)
         {
-            Form_NhanVien nv = new Form_NhanVien();
-            nv.ShowDialog();
+            //Form_NhanVien nv = new Form_NhanVien();
+            //nv.ShowDialog();
         }
 
         private void btnTaiKhoan_Click(object sender, EventArgs e)
@@ -32,20 +32,20 @@ namespace QuanLyCuaHangBanDienThoai
 
         private void btnDanhMuc_Click(object sender, EventArgs e)
         {
-            Form_DanhMucDoChoi dmdc = new Form_DanhMucDoChoi();
-            dmdc.ShowDialog();
+            //Form_DanhMucDoChoi dmdc = new Form_DanhMucDoChoi();
+            //dmdc.ShowDialog();
         }
 
         private void btnDoChoi_Click(object sender, EventArgs e)
         {
-            Form_DoChoi dc = new Form_DoChoi();
-            dc.ShowDialog();
+            //Form_DoChoi dc = new Form_DoChoi();
+            //dc.ShowDialog();
         }
 
         private void btnNganKe_Click(object sender, EventArgs e)
         {
-            Form_NganKe nk = new Form_NganKe();
-            nk.ShowDialog();
+            //Form_NganKe nk = new Form_NganKe();
+            //nk.ShowDialog();
         }
 
         private void btnNhaSanXuat_Click(object sender, EventArgs e)

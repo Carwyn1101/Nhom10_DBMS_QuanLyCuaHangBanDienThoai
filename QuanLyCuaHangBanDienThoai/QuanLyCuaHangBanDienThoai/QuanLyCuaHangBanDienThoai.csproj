@@ -8,10 +8,11 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>QuanLyCuaHangBanDienThoai</RootNamespace>
     <AssemblyName>QuanLyCuaHangBanDienThoai</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -31,6 +32,9 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -88,6 +92,18 @@
     <Compile Include="Form_NhaSanXuat.Designer.cs">
       <DependentUpon>Form_NhaSanXuat.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_TaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_TaiKhoan.Designer.cs">
+      <DependentUpon>Form_TaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_ThongKe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_ThongKe.Designer.cs">
+      <DependentUpon>Form_ThongKe.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form_AdminHome.resx">
@@ -111,6 +127,9 @@
     <EmbeddedResource Include="Form_NhaSanXuat.resx">
       <DependentUpon>Form_NhaSanXuat.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form_TaiKhoan.resx">
+      <DependentUpon>Form_TaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -119,6 +138,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -141,10 +161,6 @@
     <ProjectReference Include="..\BusinessLogicLayer\BusinessLogicLayer.csproj">
       <Project>{8058193e-738d-48df-815e-974310eb0142}</Project>
       <Name>BusinessLogicLayer</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DataAccessLayer\DataAccessLayer.csproj">
-      <Project>{cc73e84f-d658-4b33-b646-c83a4de68741}</Project>
-      <Name>DataAccessLayer</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

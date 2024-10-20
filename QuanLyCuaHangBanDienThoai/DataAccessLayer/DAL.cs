@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 // ADO.NET
 using System.Data;
 using System.Data.SqlClient;
+using System.Drawing;
 
 namespace DataAccessLayer
 {
@@ -15,7 +16,9 @@ namespace DataAccessLayer
         SqlCommand cmd = null;
         SqlDataAdapter adp = null;
 
-        string strConnect = "Data Source = (local); Initial Catalog = CuaHangDoChoi; Integrated Security = True";
+        //string strConnect = "Data Source = (local); Initial Catalog = CuaHangDoChoi; Integrated Security = True";
+        string strConnect = "Data Source =.; Initial Catalog = CuaHangDienThoai; Integrated Security = True";
+
 
         public DAL()
         {

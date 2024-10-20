@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BusinessLogicLayer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,11 +15,9 @@ namespace QuanLyCuaHangBanDienThoai
     public partial class Form_DienThoai : Form
     {
         bool Them = false;
-        DBDanhMucDienThoai dmdcbusiness = new DBDanhMucDienThoai();
         DBNhaSanXuat nsxbusiness = new DBNhaSanXuat();
         DBNganKe nkbusiness = new DBNganKe();
         DBDienThoai dcbusiness = new DBDienThoai();
-
         public Form_DienThoai()
         {
             InitializeComponent();
@@ -27,33 +26,34 @@ namespace QuanLyCuaHangBanDienThoai
         private void Form_DienThoai_Load(object sender, EventArgs e)
         {
             LoadDienThoai();
-            LoadDanhMucDienThoai();
             LoadNhaSanXuat();
             LoadNganKe();
-            LoadComboboxMaLoaiDienThoai();
         }
-
         void LoadDienThoai()
         {
             try
             {
                 // Đưa dữ liệu lên DataGridView  
                 this.dgvDienThoai.DataSource = dcbusiness.LayDienThoai().Tables[0];
-                this.dgvDienThoai.Columns[3].Visible = false;
-                this.dgvDienThoai.Columns[4].Visible = false;
-                this.dgvDienThoai.Columns[5].Visible = false;
+                //this.dgvDienThoai.Columns[3].Visible = false;
+                //this.dgvDienThoai.Columns[4].Visible = false;
+                //this.dgvDienThoai.Columns[5].Visible = false;
                 // Thay đổi độ rộng cột 
                 this.dgvDienThoai.AutoResizeColumns();
                 // Đặt tên cột
-                dgvDienThoai.Columns[0].HeaderText = "Mã đồ chơi ";
-                dgvDienThoai.Columns[1].HeaderText = "Tên đồ chơi";
-                dgvDienThoai.Columns[2].HeaderText = "Giá tiền";
+                dgvDienThoai.Columns[0].HeaderText = "Mã điện thoại ";
+                dgvDienThoai.Columns[1].HeaderText = "Tên điện thoại";
+                dgvDienThoai.Columns[2].HeaderText = "NSX";
+                dgvDienThoai.Columns[3].HeaderText = "Giá";
+                dgvDienThoai.Columns[4].HeaderText = "Vị trí kho";
+                dgvDienThoai.Columns[5].HeaderText = "Mã ngăn kệ";
+                dgvDienThoai.Columns[6].HeaderText = "Mã NSX";
 
                 // Xóa trống các đối tượng trong Panel 
-                this.txtMaDienThoai.ResetText();
+                this.txtNamSanXuat.ResetText();
                 this.txtTenDienThoai.ResetText();
                 this.txtGiaTien.ResetText();
-                this.cbxMaLoaiDienThoai.ResetText();
+                //this.cbxMaLoaiDienThoai.ResetText();
                 this.txtNhaSanXuat.ResetText();
                 this.txtMaNganKe.ResetText();
 
@@ -74,53 +74,10 @@ namespace QuanLyCuaHangBanDienThoai
             }
             catch (SqlException)
             {
-                MessageBox.Show("Không lấy được nội dung đồ chơi. Đã xảy ra lỗi!");
+                MessageBox.Show("Không lấy được nội dung điện thoại. Đã xảy ra lỗi!");
             }
         }
 
-        void LoadDanhMucDienThoai()
-        {
-            try
-            {
-                // Đưa dữ liệu lên DataGridView  
-                this.dgvLoaiDienThoai.DataSource = dmdcbusiness.LayDanhMucDienThoai().Tables[0];
-
-                // Thay đổi độ rộng cột 
-                this.dgvLoaiDienThoai.AutoResizeColumns();
-
-                // Đặt tên cột
-                dgvLoaiDienThoai.Columns[0].HeaderText = "Mã loại đồ chơi";
-                dgvLoaiDienThoai.Columns[1].HeaderText = "Tên loại đồ chơi";
-                // Sự kiện click chuột
-                dgvLoaiDienThoai_CellClick(null, null);
-            }
-            catch (SqlException)
-            {
-                MessageBox.Show("Không lấy được nội dung loại đồ chơi. Đã xảy ra lỗi!");
-            }
-        }
-
-
-        public void LoadComboboxMaLoaiDienThoai()
-        {
-            try
-            {
-                // Load MaLoaiDienThoai
-                this.cbxMaLoaiDienThoai.DataSource = dmdcbusiness.LayDanhMucDienThoai().Tables[0];
-                this.cbxMaLoaiDienThoai.ValueMember = "MaLoaiDienThoai";
-                this.cbxMaLoaiDienThoai.DisplayMember = "Mã loại đồ chơi";
-            }
-            catch (SqlException error)  //bắt lỗi sql
-            {
-                MessageBox.Show("Không truy cập dữ liệu loại đồ chơi được!\rLỗi: " + error.Message, "Lỗi SQL", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            catch (Exception er)    //bắt các lỗi khác
-            {
-                MessageBox.Show("Không truy cập dữ liệu loại đồ chơi được!\rLỗi: " + er.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        // Nút trở về
         private void btnTroVe_Click(object sender, EventArgs e)
         {
             // Khai báo biến traloi 
@@ -144,12 +101,13 @@ namespace QuanLyCuaHangBanDienThoai
 
             //this.dtp.ResetText();
             this.txtMaNganKe.ResetText();
-            this.cbxMaLoaiDienThoai.ResetText();
-            this.txtTenLoaiDienThoai.ResetText();
-            this.txtMaDienThoai.ResetText();
+            this.txtViTriKho.ResetText();
+            this.txtNamSanXuat.ResetText();
             this.txtTenDienThoai.ResetText();
             this.txtGiaTien.ResetText();
             this.txtNhaSanXuat.ResetText();
+            this.txtMaDienThoai.ResetText();
+            txtMaDienThoai.Enabled = false;
 
             // Cho thao tác trên các nút Lưu  
             this.btnLuu.Enabled = true;
@@ -162,7 +120,7 @@ namespace QuanLyCuaHangBanDienThoai
             this.btnXoa.Enabled = false;
 
             // Đưa con trỏ đến TextField txtMaLoaiDienThoai
-            this.txtMaDienThoai.Focus();
+            this.txtNamSanXuat.Focus();
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -180,13 +138,13 @@ namespace QuanLyCuaHangBanDienThoai
                 // Khai báo biến traloi 
                 DialogResult traloi;
                 // Hiện hộp thoại hỏi đáp 
-                traloi = MessageBox.Show("Bạn có chắc muốn xoá đồ chơi này không?", "Trả lời",
+                traloi = MessageBox.Show("Bạn có chắc muốn xoá điện thoại này không?", "Trả lời",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 // Kiểm tra có nhắp chọn nút Ok không? 
                 if (traloi == DialogResult.Yes)
                 {
                     // Thực hiện câu lệnh SQL 
-                    kq = dcbusiness.XoaDienThoai(ref err, txtMaDienThoai.Text);
+                    kq = dcbusiness.XoaDienThoai(ref err,int.Parse(txtMaDienThoai.Text));
                     if (kq)
                     {
                         // Cập nhật lại DataGridView 
@@ -199,12 +157,12 @@ namespace QuanLyCuaHangBanDienThoai
                 {
 
                     // Thông báo 
-                    MessageBox.Show("Huỷ bỏ việc xoá đồ chơi này!");
+                    MessageBox.Show("Huỷ bỏ việc xoá điện thoại này!");
                 }
             }
             catch (SqlException)
             {
-                MessageBox.Show("Không xóa được đồ chơi này. Lỗi rồi!");
+                MessageBox.Show("Không xóa được điện thoại này. Lỗi rồi!");
             }
         }
 
@@ -226,16 +184,15 @@ namespace QuanLyCuaHangBanDienThoai
             this.btnTroVe.Enabled = false;
             this.btnReLoad.Enabled = false;
             // Đưa con trỏ đến TextField txtMaDienThoai
-            this.txtMaDienThoai.Enabled = false;
+            this.txtNamSanXuat.Enabled = false;
         }
 
         private void btnHuyBo_Click(object sender, EventArgs e)
         {
             // Xóa trống các đối tượng 
             this.txtMaNganKe.ResetText();
-            this.cbxMaLoaiDienThoai.ResetText();
-            this.txtTenLoaiDienThoai.ResetText();
-            this.txtMaDienThoai.ResetText();
+            this.txtViTriKho.ResetText();
+            this.txtNamSanXuat.ResetText();
             this.txtTenDienThoai.ResetText();
             this.txtGiaTien.ResetText();
             this.txtNhaSanXuat.ResetText();
@@ -277,20 +234,20 @@ namespace QuanLyCuaHangBanDienThoai
             {
                 try
                 {
-                    kq = dcbusiness.ThemDienThoai(ref err, txtMaDienThoai.Text, txtTenDienThoai.Text, int.Parse(txtGiaTien.Text),
-                        cbxMaLoaiDienThoai.Text, txtNhaSanXuat.Text, txtMaNganKe.Text);
+                    kq = dcbusiness.ThemDienThoai(ref err, txtTenDienThoai.Text, txtNamSanXuat.Text, int.Parse(txtGiaTien.Text),
+                        int.Parse(txtViTriKho.Text), int.Parse(txtMaNganKe.Text), int.Parse(txtNhaSanXuat.Text));
                     if (kq)
                     {
                         // Load lại dữ liệu trên DataGridView 
                         LoadDienThoai();
                         // Thông báo 
-                        MessageBox.Show("Đã thêm đồ chơi thành công!");
+                        MessageBox.Show("Đã thêm điện thoại thành công!");
                     }
 
                 }
                 catch (SqlException)
                 {
-                    err = "Không thêm được đồ chơi. Lỗi rồi!";
+                    err = "Không thêm được điện thoại. Lỗi rồi!";
                     MessageBox.Show(err);
                 }
             }
@@ -303,8 +260,8 @@ namespace QuanLyCuaHangBanDienThoai
                 string strMaDienThoai =
                 dgvDienThoai.Rows[r].Cells[0].Value.ToString();
                 // Câu lệnh SQL 
-                kq = dcbusiness.CapNhatDienThoai(ref err, txtMaDienThoai.Text, txtTenDienThoai.Text, int.Parse(txtGiaTien.Text),
-                        cbxMaLoaiDienThoai.Text, txtNhaSanXuat.Text, txtMaNganKe.Text);
+                kq = dcbusiness.CapNhatDienThoai(ref err, int.Parse(txtMaDienThoai.Text), txtTenDienThoai.Text, txtNamSanXuat.Text, int.Parse(txtGiaTien.Text),
+                        int.Parse(txtViTriKho.Text), int.Parse(txtMaNganKe.Text), int.Parse(txtNhaSanXuat.Text));
                 if (kq)
                 {
                     // Load lại dữ liệu trên DataGridView 
@@ -318,10 +275,8 @@ namespace QuanLyCuaHangBanDienThoai
         private void btnReLoad_Click(object sender, EventArgs e)
         {
             LoadDienThoai();
-            LoadDanhMucDienThoai();
             LoadNhaSanXuat();
             LoadNganKe();
-            LoadComboboxMaLoaiDienThoai();
         }
 
         private void dgvDienThoai_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -332,32 +287,22 @@ namespace QuanLyCuaHangBanDienThoai
                 //hiển thị 
                 this.txtMaDienThoai.Text = dgvDienThoai.Rows[r].Cells[0].Value.ToString();
                 this.txtTenDienThoai.Text = dgvDienThoai.Rows[r].Cells[1].Value.ToString();
-                this.txtGiaTien.Text = dgvDienThoai.Rows[r].Cells[2].Value.ToString();
-                this.cbxMaLoaiDienThoai.Text = dgvDienThoai.Rows[r].Cells[3].Value.ToString();
-                this.txtNhaSanXuat.Text = dgvDienThoai.Rows[r].Cells[4].Value.ToString();
-                this.txtMaNganKe.Text = dgvDienThoai.Rows[r].Cells[5].Value.ToString();
-                //this.txtTenLoaiDienThoai 
-
-                //this.cbxMaLoaiDienThoai.Text = dcbusiness.LayMaLoaiDienThoai_DienThoai(txtMaDienThoai.Text);              
+                this.txtNamSanXuat.Text = dgvDienThoai.Rows[r].Cells[2].Value.ToString();
+                this.txtGiaTien.Text = dgvDienThoai.Rows[r].Cells[3].Value.ToString();
+                this.txtViTriKho.Text = dgvDienThoai.Rows[r].Cells[4].Value.ToString();
+                this.txtNhaSanXuat.Text = dgvDienThoai.Rows[r].Cells[5].Value.ToString();
+                this.txtMaNganKe.Text = dgvDienThoai.Rows[r].Cells[6].Value.ToString();
             }
             catch   //TH click row ko có data
             {
-                this.txtMaDienThoai.ResetText();
+                this.txtNamSanXuat.ResetText();
                 this.txtTenDienThoai.ResetText();
                 this.txtGiaTien.ResetText();
-                this.txtTenLoaiDienThoai.ResetText();
-                this.cbxMaLoaiDienThoai.ResetText();
+                this.txtViTriKho.ResetText();
+                //this.cbxMaLoaiDienThoai.ResetText();
                 this.txtMaNganKe.ResetText();
                 this.txtNhaSanXuat.ResetText();
             }
-        }
-
-        private void dgvLoaiDienThoai_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            int r = dgvLoaiDienThoai.CurrentCell.RowIndex;
-            // Chuyển thông tin lên panel 
-            this.cbxMaLoaiDienThoai.Text = dgvLoaiDienThoai.Rows[r].Cells[0].Value.ToString();
-            this.txtTenLoaiDienThoai.Text = dgvLoaiDienThoai.Rows[r].Cells[1].Value.ToString();
         }
         void LoadNhaSanXuat()
         {
@@ -390,23 +335,22 @@ namespace QuanLyCuaHangBanDienThoai
             // Chuyển thông tin lên panel 
             this.txtNhaSanXuat.Text = dgvNhaSanXuat.Rows[r].Cells[0].Value.ToString();
         }
-
         void LoadNganKe()
         {
             try
             {
-                // Đưa dữ liệu lên DataGridView  
+                // đưa dữ liệu lên datagridview  
                 this.dgvNganKe.DataSource = nkbusiness.NgankeSucchuaSoluong().Tables[0];
-                // Đặt tên cột
-                dgvNganKe.Columns[0].HeaderText = "Mã ngăn kệ ";
-                dgvNganKe.Columns[1].HeaderText = "Sức chứa";
-                dgvNganKe.Columns[2].HeaderText = "Đang chứa";
+                // đặt tên cột
+                dgvNganKe.Columns[0].HeaderText = "mã ngăn kệ ";
+                dgvNganKe.Columns[1].HeaderText = "sức chứa";
+                dgvNganKe.Columns[2].HeaderText = "đang chứa";
                 //
                 dgvNganKe_CellClick(null, null);
             }
             catch (SqlException)
             {
-                MessageBox.Show("Không lấy được nội dung ngăn kệ. Đã xảy ra lỗi!");
+                MessageBox.Show("không lấy được nội dung ngăn kệ. đã xảy ra lỗi!");
             }
         }
 
@@ -439,5 +383,6 @@ namespace QuanLyCuaHangBanDienThoai
         {
             dgvDienThoai.DataSource = dcbusiness.DienThoaiChuaBan().Tables[0];
         }
+
     }
 }

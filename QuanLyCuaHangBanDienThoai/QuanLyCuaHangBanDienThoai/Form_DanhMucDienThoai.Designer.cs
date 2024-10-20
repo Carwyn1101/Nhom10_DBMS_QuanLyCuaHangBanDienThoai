@@ -245,7 +245,7 @@
             this.Controls.Add(this.btnTroVe);
             this.Controls.Add(this.btnCapNhat);
             this.Controls.Add(this.btnThem);
-            this.Name = "formDanhMucDienThoai";
+            this.Name = "Form_DanhMucDienThoai";
             this.Text = "Danh mục điện thoại";
             this.Load += new System.EventHandler(this.form_DanhMucDienThoai_Load);
             this.panel.ResumeLayout(false);

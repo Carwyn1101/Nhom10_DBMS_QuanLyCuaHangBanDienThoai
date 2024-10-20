@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{8058193E-738D-48DF-815E-974310EB0142}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
+    <OutputType>Library</OutputType>
     <RootNamespace>BusinessLogicLayer</RootNamespace>
     <AssemblyName>BusinessLogicLayer</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -48,8 +51,7 @@
   <ItemGroup>
     <Compile Include="DBChiTietHoaDonBan.cs" />
     <Compile Include="DBChiTietHoaDonNhap.cs" />
-    <Compile Include="DBDanhMucDoChoi.cs" />
-    <Compile Include="DBDoChoi.cs" />
+    <Compile Include="DBDienThoai.cs" />
     <Compile Include="DBHoaDonBan.cs" />
     <Compile Include="DBHoaDonNhap.cs" />
     <Compile Include="DBNganKe.cs" />
@@ -57,7 +59,6 @@
     <Compile Include="DBNhaSanXuat.cs" />
     <Compile Include="DBTaiKhoan.cs" />
     <Compile Include="DBThongKe.cs" />
-    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -80,6 +81,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataAccessLayer\DataAccessLayer.csproj">
+      <Project>{cc73e84f-d658-4b33-b646-c83a4de68741}</Project>
+      <Name>DataAccessLayer</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

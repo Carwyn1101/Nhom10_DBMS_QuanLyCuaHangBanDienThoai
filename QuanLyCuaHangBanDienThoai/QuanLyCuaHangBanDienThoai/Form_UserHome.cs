@@ -19,8 +19,9 @@ namespace QuanLyCuaHangBanDienThoai
 
         private void btnDanhMuc_Click(object sender, EventArgs e)
         {
-            Form_DanhMucDienThoai dmdc = new Form_DanhMucDienThoai();
-            dmdc.ShowDialog();
+            //Form_DanhMucDienThoai dmdc = new Form_DanhMucDienThoai();
+            //dmdc.ShowDialog();
+            //Bị hủy
         }
 
         private void btnDienThoai_Click(object sender, EventArgs e)
@@ -31,8 +32,9 @@ namespace QuanLyCuaHangBanDienThoai
 
         private void btnNganKe_Click(object sender, EventArgs e)
         {
-            Form_NganKe nk = new Form_NganKe();
-            nk.ShowDialog();
+            //Form_NganKe nk = new Form_NganKe();
+            //nk.ShowDialog();
+            //Chưa có ngăn kệ.
         }
 
         private void btnNhaSanXuat_Click(object sender, EventArgs e)

@@ -15,7 +15,7 @@ namespace DataAccessLayer
         SqlCommand cmd = null;
         SqlDataAdapter adp = null;
 
-        string strConnect = "Data Source = (local); Initial Catalog = CuaHangDoChoi; Integrated Security = True";
+        string strConnect = "Data Source=DESKTOP-RM3I2NJ;Initial Catalog=CuaHangDienThoai;Integrated Security=True;";
 
         public DAL()
         {

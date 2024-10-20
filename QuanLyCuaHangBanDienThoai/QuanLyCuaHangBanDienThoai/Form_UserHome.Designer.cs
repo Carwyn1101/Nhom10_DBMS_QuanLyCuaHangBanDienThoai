@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.btnNhaSanXuat = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.flpNV = new System.Windows.Forms.FlowLayoutPanel();
             this.btnDanhMuc = new System.Windows.Forms.Button();
-            this.btnNhaSanXuat = new System.Windows.Forms.Button();
             this.btnHoaDonNhap = new System.Windows.Forms.Button();
             this.btnDienThoai = new System.Windows.Forms.Button();
             this.btnNganKe = new System.Windows.Forms.Button();
@@ -46,6 +46,23 @@
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
+            // btnNhaSanXuat
+            // 
+            this.btnNhaSanXuat.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnNhaSanXuat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(177)))), ((int)(((byte)(106)))));
+            this.btnNhaSanXuat.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNhaSanXuat.ForeColor = System.Drawing.Color.Transparent;
+            this.btnNhaSanXuat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNhaSanXuat.Location = new System.Drawing.Point(294, 2);
+            this.btnNhaSanXuat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnNhaSanXuat.Name = "btnNhaSanXuat";
+            this.btnNhaSanXuat.Size = new System.Drawing.Size(279, 89);
+            this.btnNhaSanXuat.TabIndex = 2;
+            this.btnNhaSanXuat.Text = "Nhà Sản Xuất";
+            this.btnNhaSanXuat.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnNhaSanXuat.UseVisualStyleBackColor = false;
+            this.btnNhaSanXuat.Click += new System.EventHandler(this.btnNhaSanXuat_Click);
+            // 
             // pictureBox2
             // 
             this.pictureBox2.Location = new System.Drawing.Point(327, 1);
@@ -53,7 +70,7 @@
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(192, 170);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 4;
+            this.pictureBox2.TabIndex = 6;
             this.pictureBox2.TabStop = false;
             // 
             // flpNV
@@ -73,7 +90,7 @@
             this.flpNV.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.flpNV.Name = "flpNV";
             this.flpNV.Size = new System.Drawing.Size(865, 318);
-            this.flpNV.TabIndex = 3;
+            this.flpNV.TabIndex = 5;
             // 
             // btnDanhMuc
             // 
@@ -92,23 +109,6 @@
             this.btnDanhMuc.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDanhMuc.UseVisualStyleBackColor = false;
             this.btnDanhMuc.Click += new System.EventHandler(this.btnDanhMuc_Click);
-            // 
-            // btnNhaSanXuat
-            // 
-            this.btnNhaSanXuat.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnNhaSanXuat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(177)))), ((int)(((byte)(106)))));
-            this.btnNhaSanXuat.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNhaSanXuat.ForeColor = System.Drawing.Color.Transparent;
-            this.btnNhaSanXuat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNhaSanXuat.Location = new System.Drawing.Point(294, 2);
-            this.btnNhaSanXuat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnNhaSanXuat.Name = "btnNhaSanXuat";
-            this.btnNhaSanXuat.Size = new System.Drawing.Size(279, 89);
-            this.btnNhaSanXuat.TabIndex = 2;
-            this.btnNhaSanXuat.Text = "Nhà Sản Xuất";
-            this.btnNhaSanXuat.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnNhaSanXuat.UseVisualStyleBackColor = false;
-            this.btnNhaSanXuat.Click += new System.EventHandler(this.btnNhaSanXuat_Click);
             // 
             // btnHoaDonNhap
             // 
@@ -253,6 +253,7 @@
             this.Controls.Add(this.flpNV);
             this.Name = "Form_UserHome";
             this.Text = "UserHome";
+            this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.flpNV.ResumeLayout(false);
             this.flpNV.PerformLayout();
@@ -264,10 +265,10 @@
 
         #endregion
 
+        private System.Windows.Forms.Button btnNhaSanXuat;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.FlowLayoutPanel flpNV;
         private System.Windows.Forms.Button btnDanhMuc;
-        private System.Windows.Forms.Button btnNhaSanXuat;
         private System.Windows.Forms.Button btnHoaDonNhap;
         private System.Windows.Forms.Button btnDienThoai;
         private System.Windows.Forms.Button btnNganKe;

@@ -52,10 +52,28 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_Nhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Nhap.Designer.cs">
+      <DependentUpon>Form_Nhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_NhaSanXuat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_NhaSanXuat.Designer.cs">
+      <DependentUpon>Form_NhaSanXuat.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Nhap.resx">
+      <DependentUpon>Form_Nhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_NhaSanXuat.resx">
+      <DependentUpon>Form_NhaSanXuat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -82,6 +100,12 @@
   <ItemGroup>
     <Folder Include="Images\" />
     <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessLogicLayer\BusinessLogicLayer.csproj">
+      <Project>{8058193e-738d-48df-815e-974310eb0142}</Project>
+      <Name>BusinessLogicLayer</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

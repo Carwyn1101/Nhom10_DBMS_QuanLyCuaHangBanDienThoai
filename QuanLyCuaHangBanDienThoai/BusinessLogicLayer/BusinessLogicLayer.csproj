@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{43BA0001-4E70-4392-8384-92D9167F4837}</ProjectGuid>
+    <ProjectGuid>{8058193E-738D-48DF-815E-974310EB0142}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>QuanLyCuaHangBanDienThoai</RootNamespace>
-    <AssemblyName>QuanLyCuaHangBanDienThoai</AssemblyName>
+    <RootNamespace>BusinessLogicLayer</RootNamespace>
+    <AssemblyName>BusinessLogicLayer</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,17 +46,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
+    <Compile Include="DBChiTietHoaDonBan.cs" />
+    <Compile Include="DBChiTietHoaDonNhap.cs" />
+    <Compile Include="DBDanhMucDoChoi.cs" />
+    <Compile Include="DBDoChoi.cs" />
+    <Compile Include="DBHoaDonBan.cs" />
+    <Compile Include="DBHoaDonNhap.cs" />
+    <Compile Include="DBNganKe.cs" />
+    <Compile Include="DBNhanVien.cs" />
+    <Compile Include="DBNhaSanXuat.cs" />
+    <Compile Include="DBTaiKhoan.cs" />
+    <Compile Include="DBThongKe.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -78,10 +80,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Images\" />
-    <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

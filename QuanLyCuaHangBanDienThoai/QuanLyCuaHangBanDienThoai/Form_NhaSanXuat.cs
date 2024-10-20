@@ -131,16 +131,10 @@ namespace QuanLyCuaHangBanDienThoai
                         MessageBox.Show("Đã xóa thành công!");
                     }
                 }
-                else
-                {
-
-                    // Thông báo 
-                    MessageBox.Show("Huỷ bỏ việc xoá nhà sản xuất này!");
-                }
             }
             catch (SqlException)
             {
-                MessageBox.Show("Không xóa được nhà sán xuất này. Lỗi rồi!");
+                MessageBox.Show("Không xóa được nhà sán xuất này!");
             }
         }
 

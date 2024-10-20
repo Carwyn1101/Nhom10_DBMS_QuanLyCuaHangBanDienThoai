@@ -130,6 +130,9 @@
     <EmbeddedResource Include="Form_TaiKhoan.resx">
       <DependentUpon>Form_TaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form_ThongKe.resx">
+      <DependentUpon>Form_ThongKe.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

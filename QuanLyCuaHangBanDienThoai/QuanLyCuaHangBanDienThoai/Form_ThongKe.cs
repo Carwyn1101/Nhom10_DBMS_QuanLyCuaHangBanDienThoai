@@ -16,5 +16,10 @@ namespace QuanLyCuaHangBanDienThoai
         {
             InitializeComponent();
         }
+
+        private void btnTongQuan_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

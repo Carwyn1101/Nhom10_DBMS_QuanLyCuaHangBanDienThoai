@@ -26,7 +26,6 @@ namespace BusinessLogicLayer
         public bool ThemNhaSanXuat(ref string err, string MaNSX, string TenNSX, string TenQuocGia)
         {
             return db.MyExecuteNonQuery("USP_ThemNhaSanXuat", CommandType.StoredProcedure, ref err,
-                new SqlParameter("@mansx", MaNSX),
                 new SqlParameter("@tennsx", TenNSX),
                 new SqlParameter("@tenquocgia", TenQuocGia));
         }
@@ -37,12 +36,12 @@ namespace BusinessLogicLayer
                 new SqlParameter("@maNSX", MaNSX));
         }
         // Cập nhật nhà sản xuất
-        public bool CapNhatNhaSanXuat(ref string err, string MaNSX, string TenNSX, string TenQuocGia)
+        public bool CapNhatNhaSanXuat(ref string err, int MaNSX, string TenNSX, string TenQuocGia)
         {
             return db.MyExecuteNonQuery("USP_CapNhatNhaSanXuat", CommandType.StoredProcedure, ref err,
-                new SqlParameter("@ma_nsx", MaNSX),
-                new SqlParameter("@ten_nsx", TenNSX),
-                new SqlParameter("@ten_quoc_gia", TenQuocGia));
+                new SqlParameter("@mansx", MaNSX),
+                new SqlParameter("@tennsx", TenNSX),
+                new SqlParameter("@TenQuocGia", TenQuocGia));
         }
     }
 }

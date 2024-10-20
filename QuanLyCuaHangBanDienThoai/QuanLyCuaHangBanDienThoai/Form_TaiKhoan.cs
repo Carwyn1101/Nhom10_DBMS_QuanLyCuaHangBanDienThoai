@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 
 namespace QuanLyCuaHangBanDienThoai
 {
@@ -32,9 +33,9 @@ namespace QuanLyCuaHangBanDienThoai
             this.panel.Enabled = true;
 
             //this.dtp.ResetText();
-            this.txtTenNguoiDung.ResetText();
+            this.txtTenDangNhap.ResetText();
             this.txtMatKhau.ResetText();
-            this.txtLoaiNguoiDung.ResetText();
+            this.txtMaTaiKhoan.ResetText();
 
             // Cho thao tác trên các nút Lưu  
             this.btnSave.Enabled = true;
@@ -46,7 +47,7 @@ namespace QuanLyCuaHangBanDienThoai
             this.btnDelete.Enabled = false;
             this.btnDelete.Enabled = false;
             // Đưa con trỏ đến TextField txtTenNguoiDung
-            this.txtTenNguoiDung.Focus();
+            this.txtTenDangNhap.Focus();
         }
         void LoadTaiKhoan()
         {
@@ -56,9 +57,9 @@ namespace QuanLyCuaHangBanDienThoai
                 this.dgvTaiKhoan.DataSource = tkbusiness.LayTaiKhoan().Tables[0];
 
                 // Xóa trống các đối tượng trong Panel
-                this.txtTenNguoiDung.ResetText();
+                this.txtTenDangNhap.ResetText();
                 this.txtMatKhau.ResetText();
-                this.txtLoaiNguoiDung.ResetText();
+                this.txtMaTaiKhoan.ResetText();
 
                 //this.dtp.ResetText();
                 this.panel.ResetText();
@@ -89,9 +90,9 @@ namespace QuanLyCuaHangBanDienThoai
             // Thứ tự dòng hiện hành 
             int r = dgvTaiKhoan.CurrentCell.RowIndex;
             // Chuyển thông tin lên panel 
-            this.txtTenNguoiDung.Text = dgvTaiKhoan.Rows[r].Cells[0].Value.ToString();
-            this.txtMatKhau.Text = dgvTaiKhoan.Rows[r].Cells[1].Value.ToString();
-            this.txtLoaiNguoiDung.Text = dgvTaiKhoan.Rows[r].Cells[2].Value.ToString();
+            this.txtMaTaiKhoan.Text = dgvTaiKhoan.Rows[r].Cells[0].Value.ToString();
+            this.txtTenDangNhap.Text = dgvTaiKhoan.Rows[r].Cells[1].Value.ToString();
+            this.txtMatKhau.Text = dgvTaiKhoan.Rows[r].Cells[2].Value.ToString();
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -124,7 +125,7 @@ namespace QuanLyCuaHangBanDienThoai
                         MessageBox.Show("Đã xóa thành công!");
                     }
                     else
-                        MessageBox.Show(txtTenNguoiDung.Text);
+                        MessageBox.Show(txtTenDangNhap.Text);
                 }
                 else
                 {
@@ -156,15 +157,15 @@ namespace QuanLyCuaHangBanDienThoai
             this.btnDelete.Enabled = false;
             this.btnReLoad.Enabled = false;
             // Đưa con trỏ đến TextField txtMatKhau
-            this.txtTenNguoiDung.Enabled = false;
+            this.txtTenDangNhap.Enabled = true;
         }
 
         private void btnHuyBo_Click(object sender, EventArgs e)
         {
             // Xóa trống các đối tượng 
-            this.txtTenNguoiDung.ResetText();
+            this.txtTenDangNhap.ResetText();
             this.txtMatKhau.ResetText();
-            this.txtLoaiNguoiDung.ResetText();
+            this.txtMaTaiKhoan.ResetText();
             this.panel.ResetText();
 
             // Cho thao tác trên các nút Thêm / Sửa / Xóa / Thoát / Reload
@@ -200,7 +201,7 @@ namespace QuanLyCuaHangBanDienThoai
             {
                 try
                 {
-                    kq = tkbusiness.ThemTaiKhoan(ref err, txtTenNguoiDung.Text, txtMatKhau.Text, txtLoaiNguoiDung.Text);
+                    kq = tkbusiness.ThemTaiKhoan(ref err, txtTenDangNhap.Text, txtMatKhau.Text);
                     if (kq)
                     {
                         // Load lại dữ liệu trên DataGridView 
@@ -212,7 +213,7 @@ namespace QuanLyCuaHangBanDienThoai
                 }
                 catch (SqlException)
                 {
-                    err = "Không thêm được tài khoản này. Lỗi rồi!";
+                    err = "Không thêm được tài khoản này.";
                     MessageBox.Show(err);
                 }
             }
@@ -225,7 +226,7 @@ namespace QuanLyCuaHangBanDienThoai
                 string strTenNguoiDung =
                 dgvTaiKhoan.Rows[r].Cells[0].Value.ToString();
                 // Câu lệnh SQL 
-                kq = tkbusiness.CapNhatTaiKhoan(ref err, txtTenNguoiDung.Text, txtMatKhau.Text, txtLoaiNguoiDung.Text);
+                kq = tkbusiness.CapNhatTaiKhoan(ref err, int.Parse(txtMaTaiKhoan.Text), txtTenDangNhap.Text, txtMatKhau.Text);
                 if (kq)
                 {
                     // Load lại dữ liệu trên DataGridView 
@@ -237,6 +238,11 @@ namespace QuanLyCuaHangBanDienThoai
         }
 
         private void btnReLoad_Click(object sender, EventArgs e)
+        {
+            LoadTaiKhoan();
+        }
+
+        private void Form_TaiKhoan_Load(object sender, EventArgs e)
         {
             LoadTaiKhoan();
         }

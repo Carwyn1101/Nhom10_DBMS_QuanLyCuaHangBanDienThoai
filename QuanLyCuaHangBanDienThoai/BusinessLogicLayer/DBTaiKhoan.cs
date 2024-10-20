@@ -23,26 +23,25 @@ namespace BusinessLogicLayer
             return db.ExecuteQueryDataSet("USP_LayTaiKhoan", CommandType.StoredProcedure);
         }
         // Thêm tài khoản 
-        public bool ThemTaiKhoan(ref string err, string TenNguoiDung, string MatKhau, string LoaiNguoiDung)
+        public bool ThemTaiKhoan(ref string err, string TenDangNhap, string MatKhau)
         {
             return db.MyExecuteNonQuery("USP_ThemTaiKhoan", CommandType.StoredProcedure, ref err,
-                new SqlParameter("@ten_nguoi_dung", TenNguoiDung),
-                new SqlParameter("@mat_khau", MatKhau),
-                new SqlParameter("@loai_nguoi_dung", LoaiNguoiDung));
+                new SqlParameter("@TenDangNhap", TenDangNhap),
+                new SqlParameter("@MatKhau", MatKhau));
         }
         // Xoá tài khoản 
-        public bool XoaTaiKhoan(ref string err, string TenNguoiDung)
+        public bool XoaTaiKhoan(ref string err, string TenDangNhap)
         {
             return db.MyExecuteNonQuery("USP_XoaTaiKhoan", CommandType.StoredProcedure, ref err,
-                new SqlParameter("@TenNguoiDung", TenNguoiDung));
+                new SqlParameter("@MaTaiKhoan", TenDangNhap));
         }
         // Cập nhật tài khoản 
-        public bool CapNhatTaiKhoan(ref string err, string TenNguoiDung, string MatKhau, string LoaiNguoiDung)
+        public bool CapNhatTaiKhoan(ref string err, int matk, string TenDangNhap, string MatKhau)
         {
             return db.MyExecuteNonQuery("USP_CapNhatTaiKhoan", CommandType.StoredProcedure, ref err,
-                new SqlParameter("@tennguoidung", TenNguoiDung),
-                new SqlParameter("@matkhau", MatKhau),
-                new SqlParameter("@loainguoidung", LoaiNguoiDung));
+                new SqlParameter("@MaTaiKhoan", matk),
+                new SqlParameter("@TenDangNhap", TenDangNhap),
+                new SqlParameter("@matkhau", MatKhau));
         }
         public int DangNhap(string TenNguoiDung, string MatKhau)
         {

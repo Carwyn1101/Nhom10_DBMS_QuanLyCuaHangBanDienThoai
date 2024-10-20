@@ -82,8 +82,8 @@ namespace QuanLyCuaHangBanDienThoai
             this.btnAdd.Enabled = false;
             this.btnUpdate.Enabled = false;
             this.btnDelete.Enabled = false;
-            // Đưa con trỏ đến TextField txtMaNhaSanXuat
-            this.txtMaNhaSanXuat.Focus();
+            // Đưa con trỏ đến TextField txtTenNhaSanXuat
+            this.txtTenNhaSanXuat.Focus();
         }
 
         private void Form_NhaSanXuat_Load(object sender, EventArgs e)
@@ -225,7 +225,7 @@ namespace QuanLyCuaHangBanDienThoai
                 string strMaNhaSanXuat =
                 dgvDanhSachNhaSanXuat.Rows[r].Cells[0].Value.ToString();
                 // Câu lệnh SQL 
-                kq = nsxDB.CapNhatNhaSanXuat(ref err, txtMaNhaSanXuat.Text, txtTenNhaSanXuat.Text, txtTenQuocGia.Text);
+                kq = nsxDB.CapNhatNhaSanXuat(ref err, int.Parse(txtMaNhaSanXuat.Text), txtTenNhaSanXuat.Text, txtTenQuocGia.Text);
                 if (kq)
                 {
                     // Load lại dữ liệu trên DataGridView 

@@ -39,11 +39,11 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtTenNguoiDung = new System.Windows.Forms.TextBox();
+            this.txtTenDangNhap = new System.Windows.Forms.TextBox();
             this.txtMatKhau = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtLoaiNguoiDung = new System.Windows.Forms.TextBox();
             this.panel = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtMaTaiKhoan = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTaiKhoan)).BeginInit();
             this.panel.SuspendLayout();
@@ -167,61 +167,44 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(15, 33);
+            this.label1.Location = new System.Drawing.Point(14, 84);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(123, 20);
+            this.label1.Size = new System.Drawing.Size(124, 20);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Tên người dùng";
+            this.label1.Text = "Tên đăng nhập:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(15, 74);
+            this.label2.Location = new System.Drawing.Point(14, 120);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(77, 20);
+            this.label2.Size = new System.Drawing.Size(82, 20);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Mật khẩu";
+            this.label2.Text = "Mật khẩu:";
             // 
-            // txtTenNguoiDung
+            // txtTenDangNhap
             // 
-            this.txtTenNguoiDung.Location = new System.Drawing.Point(180, 33);
-            this.txtTenNguoiDung.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtTenNguoiDung.Name = "txtTenNguoiDung";
-            this.txtTenNguoiDung.Size = new System.Drawing.Size(221, 26);
-            this.txtTenNguoiDung.TabIndex = 2;
+            this.txtTenDangNhap.Location = new System.Drawing.Point(180, 78);
+            this.txtTenDangNhap.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtTenDangNhap.Name = "txtTenDangNhap";
+            this.txtTenDangNhap.Size = new System.Drawing.Size(221, 26);
+            this.txtTenDangNhap.TabIndex = 2;
             // 
             // txtMatKhau
             // 
-            this.txtMatKhau.Location = new System.Drawing.Point(180, 74);
+            this.txtMatKhau.Location = new System.Drawing.Point(180, 114);
             this.txtMatKhau.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtMatKhau.Name = "txtMatKhau";
             this.txtMatKhau.Size = new System.Drawing.Size(221, 26);
             this.txtMatKhau.TabIndex = 3;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(15, 114);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(127, 20);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Loại người dùng";
-            // 
-            // txtLoaiNguoiDung
-            // 
-            this.txtLoaiNguoiDung.Location = new System.Drawing.Point(180, 114);
-            this.txtLoaiNguoiDung.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtLoaiNguoiDung.Name = "txtLoaiNguoiDung";
-            this.txtLoaiNguoiDung.Size = new System.Drawing.Size(221, 26);
-            this.txtLoaiNguoiDung.TabIndex = 5;
-            // 
             // panel
             // 
             this.panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel.Controls.Add(this.txtLoaiNguoiDung);
+            this.panel.Controls.Add(this.txtMaTaiKhoan);
             this.panel.Controls.Add(this.label4);
             this.panel.Controls.Add(this.txtMatKhau);
-            this.panel.Controls.Add(this.txtTenNguoiDung);
+            this.panel.Controls.Add(this.txtTenDangNhap);
             this.panel.Controls.Add(this.label2);
             this.panel.Controls.Add(this.label1);
             this.panel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -230,6 +213,24 @@
             this.panel.Name = "panel";
             this.panel.Size = new System.Drawing.Size(432, 153);
             this.panel.TabIndex = 20;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(14, 48);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(114, 20);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "Mã tài khoản: ";
+            // 
+            // txtMaTaiKhoan
+            // 
+            this.txtMaTaiKhoan.Location = new System.Drawing.Point(180, 42);
+            this.txtMaTaiKhoan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtMaTaiKhoan.Name = "txtMaTaiKhoan";
+            this.txtMaTaiKhoan.ReadOnly = true;
+            this.txtMaTaiKhoan.Size = new System.Drawing.Size(221, 26);
+            this.txtMaTaiKhoan.TabIndex = 5;
             // 
             // Form_TaiKhoan
             // 
@@ -247,6 +248,7 @@
             this.Controls.Add(this.panel);
             this.Name = "Form_TaiKhoan";
             this.Text = "Form_TaiKhoan";
+            this.Load += new System.EventHandler(this.Form_TaiKhoan_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTaiKhoan)).EndInit();
             this.panel.ResumeLayout(false);
@@ -269,10 +271,10 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtTenNguoiDung;
+        private System.Windows.Forms.TextBox txtTenDangNhap;
         private System.Windows.Forms.TextBox txtMatKhau;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtLoaiNguoiDung;
         private System.Windows.Forms.Panel panel;
+        private System.Windows.Forms.TextBox txtMaTaiKhoan;
+        private System.Windows.Forms.Label label4;
     }
 }

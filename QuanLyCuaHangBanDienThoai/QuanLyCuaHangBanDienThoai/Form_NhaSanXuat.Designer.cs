@@ -113,6 +113,7 @@
             this.txtMaNhaSanXuat.Location = new System.Drawing.Point(197, 28);
             this.txtMaNhaSanXuat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtMaNhaSanXuat.Name = "txtMaNhaSanXuat";
+            this.txtMaNhaSanXuat.ReadOnly = true;
             this.txtMaNhaSanXuat.Size = new System.Drawing.Size(199, 26);
             this.txtMaNhaSanXuat.TabIndex = 0;
             // 

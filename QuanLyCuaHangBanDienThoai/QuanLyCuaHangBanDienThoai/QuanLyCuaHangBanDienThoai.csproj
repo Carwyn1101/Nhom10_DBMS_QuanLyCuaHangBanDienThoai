@@ -46,16 +46,43 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Form_DanhMucDienThoai.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Form_DanhMucDienThoai.Designer.cs">
+      <DependentUpon>Form_DanhMucDienThoai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_ThongTin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_ThongTin.Designer.cs">
+      <DependentUpon>Form_ThongTin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_UserHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_UserHome.Designer.cs">
+      <DependentUpon>Form_UserHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_DienThoai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_DienThoai.Designer.cs">
+      <DependentUpon>Form_DienThoai.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="Form_DanhMucDienThoai.resx">
+      <DependentUpon>Form_DanhMucDienThoai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_DienThoai.resx">
+      <DependentUpon>Form_DienThoai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_ThongTin.resx">
+      <DependentUpon>Form_ThongTin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_UserHome.resx">
+      <DependentUpon>Form_UserHome.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

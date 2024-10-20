@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -11,23 +10,23 @@ using System.Windows.Forms;
 
 namespace QuanLyCuaHangBanDienThoai
 {
-    public partial class frmAdminHome : Form
+    public partial class Form_AdminHome : Form
     {
-        public frmAdminHome()
+        public Form_AdminHome()
         {
             InitializeComponent();
-        }
-
-        private void btnNhanVien_Click(object sender, EventArgs e)
-        {
-            //Form_NhanVien nv = new Form_NhanVien();
-            //nv.ShowDialog();
         }
 
         private void btnTaiKhoan_Click(object sender, EventArgs e)
         {
             Form_TaiKhoan tk = new Form_TaiKhoan();
             tk.ShowDialog();
+        }
+
+        private void btnNhanVien_Click(object sender, EventArgs e)
+        {
+            //Form_NhanVien nv = new Form_NhanVien();
+            //nv.ShowDialog();
         }
 
         private void btnDanhMuc_Click(object sender, EventArgs e)
@@ -71,6 +70,5 @@ namespace QuanLyCuaHangBanDienThoai
             Form_ThongKe tk = new Form_ThongKe();
             tk.ShowDialog();
         }
-
     }
 }

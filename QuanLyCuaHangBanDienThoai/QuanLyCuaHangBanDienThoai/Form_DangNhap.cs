@@ -37,10 +37,11 @@ namespace QuanLyCuaHangBanDienThoai
             else if (check == 2)
             {
                 //Form_UserHome usr = new Form_UserHome();
-                //usr.ShowDialog();
-                //txtTenNguoiDung.ResetText();
-                //txtMatKhau.ResetText();
-                //txtTenNguoiDung.Focus();
+                Form_Ban usr = new Form_Ban();
+                usr.ShowDialog();
+                txtTenNguoiDung.ResetText();
+                txtMatKhau.ResetText();
+                txtTenNguoiDung.Focus();
             }
             else // không đúng thì xuất ra thông báo!
             {

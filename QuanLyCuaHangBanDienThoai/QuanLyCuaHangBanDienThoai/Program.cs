@@ -16,7 +16,7 @@ namespace QuanLyCuaHangBanDienThoai
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form_DienThoai());
+            Application.Run(new Form_DangNhap());
         }
     }
 }

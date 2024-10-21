@@ -70,5 +70,35 @@ namespace QuanLyCuaHangBanDienThoai
             Form_ThongKe tk = new Form_ThongKe();
             tk.ShowDialog();
         }
+
+        private void btnDangXuat_Click(object sender, EventArgs e)
+        {
+            // Khai báo biến traloi 
+            DialogResult traloi;
+            // Hiện hộp thoại hỏi đáp 
+            traloi = MessageBox.Show("Bạn có muốn đăng xuất?", "Trả lời",
+                MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            // Kiểm tra có nhắp chọn nút Ok không? 
+            if (traloi == DialogResult.OK)
+                this.Close();
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            // Khai báo biến traloi 
+            DialogResult traloi;
+            // Hiện hộp thoại hỏi đáp 
+            traloi = MessageBox.Show("Bạn có muốn thoát ứng dụng?", "Trả lời",
+                MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            // Kiểm tra có nhắp chọn nút Ok không? 
+            if (traloi == DialogResult.OK)
+                Environment.Exit(0);
+        }
+
+        private void btnThongTin_Click(object sender, EventArgs e)
+        {
+            //Form_ThongTin tt = new Form_ThongTin();
+            //tt.ShowDialog();
+        }
     }
 }

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace BusinessLogicLayer
 {
-    public class DBThongKe
+    internal class DBThongKe
     {
         DAL db = null;
 

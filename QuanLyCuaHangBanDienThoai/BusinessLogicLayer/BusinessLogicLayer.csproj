@@ -51,8 +51,7 @@
   <ItemGroup>
     <Compile Include="DBChiTietHoaDonBan.cs" />
     <Compile Include="DBChiTietHoaDonNhap.cs" />
-    <Compile Include="DBDanhMucDoChoi.cs" />
-    <Compile Include="DBDoChoi.cs" />
+    <Compile Include="DBDienThoai.cs" />
     <Compile Include="DBHoaDonBan.cs" />
     <Compile Include="DBHoaDonNhap.cs" />
     <Compile Include="DBNganKe.cs" />

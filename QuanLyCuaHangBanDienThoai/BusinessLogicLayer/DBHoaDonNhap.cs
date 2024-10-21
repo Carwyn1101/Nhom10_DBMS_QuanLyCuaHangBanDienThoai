@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace BusinessLogicLayer
 {
-    public class DBHoaDonNhap
+    internal class DBHoaDonNhap
     {
         DAL db = null;
         public DBHoaDonNhap()

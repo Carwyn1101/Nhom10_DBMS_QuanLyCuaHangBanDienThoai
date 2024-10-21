@@ -16,21 +16,5 @@ namespace QuanLyCuaHangBanDienThoai
         {
             InitializeComponent();
         }
-
-        private void btnHoaDonBan_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            //Form_HoaDonBan hdb = new Form_HoaDonBan();
-            //hdb.ShowDialog();
-            this.Close();
-        }
-
-        private void btnCTHDB_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Form_ChiTietHoaDonBan cthdb = new Form_ChiTietHoaDonBan();
-            cthdb.ShowDialog();
-            this.Close();
-        }
     }
 }

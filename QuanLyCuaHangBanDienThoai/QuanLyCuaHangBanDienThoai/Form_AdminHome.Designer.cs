@@ -1,6 +1,6 @@
 ﻿namespace QuanLyCuaHangBanDienThoai
 {
-    partial class Form_AdminHome
+    partial class frmAdminHome
     {
         /// <summary>
         /// Required designer variable.
@@ -28,9 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.flpNav = new System.Windows.Forms.FlowLayoutPanel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.btnTaiKhoan = new System.Windows.Forms.Button();
             this.btnNhanVien = new System.Windows.Forms.Button();
             this.btnDanhMuc = new System.Windows.Forms.Button();
@@ -38,67 +35,26 @@
             this.btnNganKe = new System.Windows.Forms.Button();
             this.btnNhaSanXuat = new System.Windows.Forms.Button();
             this.btnHoaDonNhap = new System.Windows.Forms.Button();
-            this.btnHoaDonBan = new System.Windows.Forms.Button();
             this.btnThongKe = new System.Windows.Forms.Button();
+            this.flpNav = new System.Windows.Forms.FlowLayoutPanel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnHoaDonBan = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnThongTin = new System.Windows.Forms.Button();
             this.btnThoat = new System.Windows.Forms.Button();
             this.btnDangXuat = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.flpNav.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
-            // 
-            // flpNav
-            // 
-            this.flpNav.AutoSize = true;
-            this.flpNav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(177)))), ((int)(((byte)(106)))));
-            this.flpNav.Controls.Add(this.panel3);
-            this.flpNav.Controls.Add(this.btnTaiKhoan);
-            this.flpNav.Controls.Add(this.btnNhanVien);
-            this.flpNav.Controls.Add(this.btnDanhMuc);
-            this.flpNav.Controls.Add(this.btnDoChoi);
-            this.flpNav.Controls.Add(this.btnNganKe);
-            this.flpNav.Controls.Add(this.btnNhaSanXuat);
-            this.flpNav.Controls.Add(this.btnHoaDonNhap);
-            this.flpNav.Controls.Add(this.btnHoaDonBan);
-            this.flpNav.Controls.Add(this.btnThongKe);
-            this.flpNav.Dock = System.Windows.Forms.DockStyle.Left;
-            this.flpNav.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flpNav.Location = new System.Drawing.Point(0, 91);
-            this.flpNav.Margin = new System.Windows.Forms.Padding(4);
-            this.flpNav.Name = "flpNav";
-            this.flpNav.Size = new System.Drawing.Size(276, 823);
-            this.flpNav.TabIndex = 6;
-            this.flpNav.WrapContents = false;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.label1);
-            this.panel3.Location = new System.Drawing.Point(4, 4);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(263, 87);
-            this.panel3.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Constantia", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(49, 22);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(139, 41);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "ADMIN";
             // 
             // btnTaiKhoan
             // 
@@ -247,6 +203,71 @@
             this.btnHoaDonNhap.UseVisualStyleBackColor = true;
             this.btnHoaDonNhap.Click += new System.EventHandler(this.btnHoaDonNhap_Click);
             // 
+            // btnThongKe
+            // 
+            this.btnThongKe.AutoSize = true;
+            this.btnThongKe.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnThongKe.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.btnThongKe.FlatAppearance.BorderSize = 0;
+            this.btnThongKe.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(237)))), ((int)(((byte)(183)))));
+            this.btnThongKe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThongKe.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThongKe.ForeColor = System.Drawing.Color.White;
+            this.btnThongKe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnThongKe.Location = new System.Drawing.Point(4, 736);
+            this.btnThongKe.Margin = new System.Windows.Forms.Padding(4, 9, 9, 4);
+            this.btnThongKe.Name = "btnThongKe";
+            this.btnThongKe.Size = new System.Drawing.Size(263, 66);
+            this.btnThongKe.TabIndex = 9;
+            this.btnThongKe.Text = "Thống kê";
+            this.btnThongKe.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnThongKe.UseVisualStyleBackColor = true;
+            this.btnThongKe.Click += new System.EventHandler(this.btnThongKe_Click);
+            // 
+            // flpNav
+            // 
+            this.flpNav.AutoSize = true;
+            this.flpNav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(177)))), ((int)(((byte)(106)))));
+            this.flpNav.Controls.Add(this.panel3);
+            this.flpNav.Controls.Add(this.btnTaiKhoan);
+            this.flpNav.Controls.Add(this.btnNhanVien);
+            this.flpNav.Controls.Add(this.btnDanhMuc);
+            this.flpNav.Controls.Add(this.btnDoChoi);
+            this.flpNav.Controls.Add(this.btnNganKe);
+            this.flpNav.Controls.Add(this.btnNhaSanXuat);
+            this.flpNav.Controls.Add(this.btnHoaDonNhap);
+            this.flpNav.Controls.Add(this.btnHoaDonBan);
+            this.flpNav.Controls.Add(this.btnThongKe);
+            this.flpNav.Dock = System.Windows.Forms.DockStyle.Left;
+            this.flpNav.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flpNav.Location = new System.Drawing.Point(0, 91);
+            this.flpNav.Margin = new System.Windows.Forms.Padding(4);
+            this.flpNav.Name = "flpNav";
+            this.flpNav.Size = new System.Drawing.Size(276, 865);
+            this.flpNav.TabIndex = 3;
+            this.flpNav.WrapContents = false;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.label1);
+            this.panel3.Location = new System.Drawing.Point(4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(263, 87);
+            this.panel3.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Constantia", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(49, 22);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(139, 41);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "ADMIN";
+            // 
             // btnHoaDonBan
             // 
             this.btnHoaDonBan.AutoSize = true;
@@ -268,26 +289,15 @@
             this.btnHoaDonBan.UseVisualStyleBackColor = true;
             this.btnHoaDonBan.Click += new System.EventHandler(this.btnHoaDonBan_Click);
             // 
-            // btnThongKe
+            // pictureBox1
             // 
-            this.btnThongKe.AutoSize = true;
-            this.btnThongKe.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnThongKe.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
-            this.btnThongKe.FlatAppearance.BorderSize = 0;
-            this.btnThongKe.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(237)))), ((int)(((byte)(183)))));
-            this.btnThongKe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThongKe.Font = new System.Drawing.Font("Constantia", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThongKe.ForeColor = System.Drawing.Color.White;
-            this.btnThongKe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThongKe.Location = new System.Drawing.Point(4, 736);
-            this.btnThongKe.Margin = new System.Windows.Forms.Padding(4, 9, 9, 4);
-            this.btnThongKe.Name = "btnThongKe";
-            this.btnThongKe.Size = new System.Drawing.Size(263, 66);
-            this.btnThongKe.TabIndex = 9;
-            this.btnThongKe.Text = "Thống kê";
-            this.btnThongKe.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnThongKe.UseVisualStyleBackColor = true;
-            this.btnThongKe.Click += new System.EventHandler(this.btnThongKe_Click);
+            this.pictureBox1.Location = new System.Drawing.Point(520, 279);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(250, 250);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
             // 
             // btnThongTin
             // 
@@ -328,30 +338,15 @@
             this.btnDangXuat.TabIndex = 4;
             this.btnDangXuat.UseVisualStyleBackColor = true;
             // 
-            // pictureBox1
+            // pictureBox2
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(520, 279);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(250, 250);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(245)))), ((int)(((byte)(255)))));
-            this.panel1.Controls.Add(this.btnThongTin);
-            this.panel1.Controls.Add(this.btnThoat);
-            this.panel1.Controls.Add(this.btnDangXuat);
-            this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1164, 91);
-            this.panel1.TabIndex = 7;
+            this.pictureBox2.Location = new System.Drawing.Point(47, 6);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(64, 64);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox2.TabIndex = 3;
+            this.pictureBox2.TabStop = false;
             // 
             // label2
             // 
@@ -365,6 +360,21 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Dashboard";
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(245)))), ((int)(((byte)(255)))));
+            this.panel1.Controls.Add(this.btnThongTin);
+            this.panel1.Controls.Add(this.btnThoat);
+            this.panel1.Controls.Add(this.btnDangXuat);
+            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1104, 91);
+            this.panel1.TabIndex = 4;
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
@@ -373,39 +383,29 @@
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1164, 914);
-            this.panel2.TabIndex = 8;
+            this.panel2.Size = new System.Drawing.Size(1104, 956);
+            this.panel2.TabIndex = 5;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Location = new System.Drawing.Point(47, 6);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(64, 64);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox2.TabIndex = 3;
-            this.pictureBox2.TabStop = false;
-            // 
-            // Form_AdminHome
+            // frmAdminHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1164, 914);
+            this.ClientSize = new System.Drawing.Size(1104, 956);
             this.Controls.Add(this.flpNav);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
-            this.Name = "Form_AdminHome";
+            this.Name = "frmAdminHome";
             this.Text = "Form_AdminHome";
             this.flpNav.ResumeLayout(false);
             this.flpNav.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -413,9 +413,6 @@
 
         #endregion
 
-        private System.Windows.Forms.FlowLayoutPanel flpNav;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnTaiKhoan;
         private System.Windows.Forms.Button btnNhanVien;
         private System.Windows.Forms.Button btnDanhMuc;
@@ -423,15 +420,19 @@
         private System.Windows.Forms.Button btnNganKe;
         private System.Windows.Forms.Button btnNhaSanXuat;
         private System.Windows.Forms.Button btnHoaDonNhap;
-        private System.Windows.Forms.Button btnHoaDonBan;
         private System.Windows.Forms.Button btnThongKe;
+        private System.Windows.Forms.FlowLayoutPanel flpNav;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnHoaDonBan;
+        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnThongTin;
         private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.Button btnDangXuat;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
     }
 }
+

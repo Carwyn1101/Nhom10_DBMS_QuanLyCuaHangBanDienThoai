@@ -80,6 +80,12 @@
     <Compile Include="Form_DangNhap.Designer.cs">
       <DependentUpon>Form_DangNhap.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_DienThoai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_DienThoai.Designer.cs">
+      <DependentUpon>Form_DienThoai.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_Nhap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +110,18 @@
     <Compile Include="Form_ThongKe.Designer.cs">
       <DependentUpon>Form_ThongKe.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_ThongTin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_ThongTin.Designer.cs">
+      <DependentUpon>Form_ThongTin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_UserHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_UserHome.Designer.cs">
+      <DependentUpon>Form_UserHome.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form_AdminHome.resx">
@@ -121,6 +139,9 @@
     <EmbeddedResource Include="Form_DangNhap.resx">
       <DependentUpon>Form_DangNhap.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form_DienThoai.resx">
+      <DependentUpon>Form_DienThoai.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_Nhap.resx">
       <DependentUpon>Form_Nhap.cs</DependentUpon>
     </EmbeddedResource>
@@ -129,6 +150,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_TaiKhoan.resx">
       <DependentUpon>Form_TaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_ThongTin.resx">
+      <DependentUpon>Form_ThongTin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_UserHome.resx">
+      <DependentUpon>Form_UserHome.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -50,7 +50,6 @@
             this.btnCTHDB.Text = "Chi tiết ";
             this.btnCTHDB.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCTHDB.UseVisualStyleBackColor = false;
-            this.btnCTHDB.Click += new System.EventHandler(this.btnCTHDB_Click);
             // 
             // btnHoaDonBan
             // 
@@ -70,13 +69,12 @@
             this.btnHoaDonBan.Text = "Hoá đơn bán";
             this.btnHoaDonBan.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnHoaDonBan.UseVisualStyleBackColor = false;
-            this.btnHoaDonBan.Click += new System.EventHandler(this.btnHoaDonBan_Click);
             // 
             // Form_Ban
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(302, 143);
+            this.ClientSize = new System.Drawing.Size(302, 450);
             this.Controls.Add(this.btnCTHDB);
             this.Controls.Add(this.btnHoaDonBan);
             this.Name = "Form_Ban";

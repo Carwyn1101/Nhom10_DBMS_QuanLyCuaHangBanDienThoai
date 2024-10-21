@@ -9,7 +9,7 @@ using DataAccessLayer;
 
 namespace BusinessLogicLayer
 {
-    public class DBChiTietHoaDonBan
+    internal class DBChiTietHoaDonBan
     {
         DAL db = null;
         public DBChiTietHoaDonBan()
@@ -22,29 +22,28 @@ namespace BusinessLogicLayer
             return db.ExecuteQueryDataSet("SELECT * FROM UDF_LayChiTietHoaDonBan()", CommandType.Text);
         }
         //Thêm chi tiết hóa đơn bán
-        public bool ThemChiTietHoaDonBan(ref string err, string soLuongBan, string mahoadonban, string madienthoai, string giaban)
+        public bool ThemChiTietHoaDonBan(ref string err, string maban, string mahoadonban, string madochoi, string giaban)
         {
             return db.MyExecuteNonQuery("USP_ThemChiTietHoaDonBan", CommandType.StoredProcedure, ref err,
-                new SqlParameter("@SoLuongBan", Int32.Parse(soLuongBan)),
-                new SqlParameter("@MaHoaDonBan", Int32.Parse(mahoadonban)),
-                new SqlParameter("@MaDienThoai", Int32.Parse(madienthoai)),
-                new SqlParameter("@TongGiaTriBan", Int32.Parse(giaban)));
+                new SqlParameter("@maban", maban),
+                new SqlParameter("@mahoadon", mahoadonban),
+                new SqlParameter("@madochoi", madochoi),
+                new SqlParameter("@giaban", Int32.Parse(giaban)));
         }
         //Cập nhật chi tiết hóa đơn bán
-        public bool CapNhatChiTietHoaDonBan(ref string err, string soLuongBan, string mahoadonban, string madienthoai, string giaban)
+        public bool CapNhatChiTietHoaDonBan(ref string err, string maban, string mahoadonban, string madochoi, string giaban)
         {
             return db.MyExecuteNonQuery("USP_CapNhatChiTietHoaDonBan", CommandType.StoredProcedure, ref err,
-                new SqlParameter("@MaHoaDonBan", Int32.Parse(mahoadonban)),
-                new SqlParameter("@MaDienThoai", Int32.Parse(madienthoai)),
-                new SqlParameter("@SoLuongBan", Int32.Parse(soLuongBan)),
-                new SqlParameter("@TongGiaTriBan", Int32.Parse(giaban)));
+                new SqlParameter("@MaBan", maban),
+                new SqlParameter("@MaHoaDonBan", mahoadonban),
+                new SqlParameter("@MaDoChoi", madochoi),
+                new SqlParameter("@GiaBan", Int32.Parse(giaban)));
         }
         //Xoá chi tiết hóa đơn bán
-        public bool XoaChiTietHoaDonBan(ref string err, string maban, string madienthoai)
+        public bool XoaChiTietHoaDonBan(ref string err, string maban)
         {
             return db.MyExecuteNonQuery("USP_XoaChiTietHoaDonBan", CommandType.StoredProcedure, ref err,
-                new SqlParameter("@MaDienThoai", madienthoai),
-                new SqlParameter("@MaHoaDonBan", maban));
+                new SqlParameter("@maban", maban));
         }
         //Thống kê chi tiết hoá đơn bán tháng vừa rồi
         public DataSet ThongKeCTHDBThangVuaQua()

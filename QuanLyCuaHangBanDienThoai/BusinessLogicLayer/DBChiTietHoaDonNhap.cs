@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace BusinessLogicLayer
 {
-    public class DBChiTietHoaDonNhap
+    internal class DBChiTietHoaDonNhap
     {
         DAL db = null;
         public DBChiTietHoaDonNhap()
@@ -22,31 +22,28 @@ namespace BusinessLogicLayer
             return db.ExecuteQueryDataSet("SELECT * FROM UDF_LayChiTietHoaDonNhap()", CommandType.Text);
         }
         //Thêm chi tiết hóa đơn nhập
-        public bool ThemChiTietHoaDonNhap(ref string err, string soLuongNhap, string gianhap, string mahoadonnhap, string madienthoai, string tonggianhap)
+        public bool ThemChiTietHoaDonNhap(ref string err, string manhap, string mahoadonnhap, string madochoi, string gianhap)
         {
             return db.MyExecuteNonQuery("USP_ThemChiTietHoaDonNhap", CommandType.StoredProcedure, ref err,
-                new SqlParameter("@MaHoaDonNhap", Int32.Parse(mahoadonnhap)),
-                new SqlParameter("@MaDienThoai", Int32.Parse(madienthoai)),
-                new SqlParameter("@SoLuongNhap", Int32.Parse(soLuongNhap)),
-                new SqlParameter("@GiaNhap", Int32.Parse(gianhap)),
-                new SqlParameter("@TongGiaTriNhap", Int32.Parse(tonggianhap)));
+                new SqlParameter("@MaNhap", manhap),
+                new SqlParameter("@MaHoaDonNhap", mahoadonnhap),
+                new SqlParameter("@MaDoChoi", madochoi),
+                new SqlParameter("@GiaNhap", Int32.Parse(gianhap)));
         }
         //Cập nhật chi tiết hóa đơn nhập
-        public bool CapNhatChiTietHoaDonNhap(ref string err, string soLuongNhap, string gianhap, string mahoadonnhap, string madienthoai, string tonggianhap)
+        public bool CapNhatChiTietHoaDonNhap(ref string err, string manhap, string mahoadonnhap, string madochoi, string gianhap)
         {
             return db.MyExecuteNonQuery("USP_CapNhatChiTietHoaDonNhap", CommandType.StoredProcedure, ref err,
-                new SqlParameter("@MaHoaDonNhap", Int32.Parse(mahoadonnhap)),
-                new SqlParameter("@MaDienThoai", Int32.Parse(madienthoai)),
-                new SqlParameter("@SoLuongNhap", Int32.Parse(soLuongNhap)),
-                new SqlParameter("@GiaNhap", Int32.Parse(gianhap)),
-                new SqlParameter("@TongGiaTriNhap", Int32.Parse(tonggianhap)));
+                new SqlParameter("@manhap", manhap),
+                new SqlParameter("@mahoadonnhap", mahoadonnhap),
+                new SqlParameter("@madochoi", madochoi),
+                new SqlParameter("@gianhap", Int32.Parse(gianhap)));
         }
         //Xoá chi tiết hoá đơn nhập
-        public bool XoaChiTietHoaDonNhap(ref string err, string manhap, string madienthoai)
+        public bool XoaChiTietHoaDonNhap(ref string err, string manhap)
         {
             return db.MyExecuteNonQuery("USP_XoaChiTietHoaDonNhap", CommandType.StoredProcedure, ref err,
-                new SqlParameter("@MaDienThoai", madienthoai),
-                new SqlParameter("@MaHoaDonNhap", manhap));
+                new SqlParameter("@ma_nhap", manhap));
         }
         //Thống kê chi tiết hoá đơn nhập tháng vừa rồi
         public DataSet ThongKeCTHDNThangVuaQua()

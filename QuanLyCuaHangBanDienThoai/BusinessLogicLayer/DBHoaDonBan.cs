@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace BusinessLogicLayer
 {
-    public class DBHoaDonBan
+    internal class DBHoaDonBan
     {
         DAL db = null;
         public DBHoaDonBan()

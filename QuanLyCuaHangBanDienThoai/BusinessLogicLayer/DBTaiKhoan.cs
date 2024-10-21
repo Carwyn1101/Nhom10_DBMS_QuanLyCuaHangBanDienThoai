@@ -47,9 +47,9 @@ namespace BusinessLogicLayer
         public int DangNhap(string TenNguoiDung, string MatKhau)
         {
             DataSet tk = db.ExecuteQueryDataSet($"SELECT * FROM UDF_XacThucTaiKhoan('{TenNguoiDung}','{MatKhau}')", CommandType.Text);
-            if (tk.Tables[0].Rows.Count == 0)         
+            if (tk.Tables[0].Rows.Count == 0)
                 return 0; // Sai
-            else if (tk.Tables[0].Rows[0].Field<string>("Role") == "Admin" || tk.Tables[0].Rows[0].Field<string>("Role") == "admin")
+            else if (tk.Tables[0].Rows[0].Field<string>("LoaiNguoiDung") == "Admin")
                 return 1; // Admin
             else
                 return 2; // User

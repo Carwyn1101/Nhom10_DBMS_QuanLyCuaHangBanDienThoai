@@ -19,10 +19,10 @@ namespace QuanLyCuaHangBanDienThoai
 
         private void btnHoaDonNhap_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            frmHoaDonNhap hdn = new frmHoaDonNhap();
-            hdn.ShowDialog();
-            this.Close();
+            //this.Hide();
+            //frmHoaDonNhap hdn = new frmHoaDonNhap();
+            //hdn.ShowDialog();
+            //this.Close();
         }
 
         private void btnChiTietHDN_Click(object sender, EventArgs e)

@@ -42,8 +42,8 @@
             this.txtTenDangNhap = new System.Windows.Forms.TextBox();
             this.txtMatKhau = new System.Windows.Forms.TextBox();
             this.panel = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtMaTaiKhoan = new System.Windows.Forms.TextBox();
+            this.txtLoaiNguoiDung = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTaiKhoan)).BeginInit();
             this.panel.SuspendLayout();
@@ -167,7 +167,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(14, 84);
+            this.label1.Location = new System.Drawing.Point(14, 36);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(124, 20);
             this.label1.TabIndex = 0;
@@ -176,7 +176,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(14, 120);
+            this.label2.Location = new System.Drawing.Point(14, 71);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(82, 20);
             this.label2.TabIndex = 1;
@@ -184,7 +184,7 @@
             // 
             // txtTenDangNhap
             // 
-            this.txtTenDangNhap.Location = new System.Drawing.Point(180, 78);
+            this.txtTenDangNhap.Location = new System.Drawing.Point(180, 33);
             this.txtTenDangNhap.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTenDangNhap.Name = "txtTenDangNhap";
             this.txtTenDangNhap.Size = new System.Drawing.Size(221, 26);
@@ -192,7 +192,7 @@
             // 
             // txtMatKhau
             // 
-            this.txtMatKhau.Location = new System.Drawing.Point(180, 114);
+            this.txtMatKhau.Location = new System.Drawing.Point(180, 71);
             this.txtMatKhau.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtMatKhau.Name = "txtMatKhau";
             this.txtMatKhau.Size = new System.Drawing.Size(221, 26);
@@ -201,9 +201,9 @@
             // panel
             // 
             this.panel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel.Controls.Add(this.txtMaTaiKhoan);
-            this.panel.Controls.Add(this.label4);
+            this.panel.Controls.Add(this.txtLoaiNguoiDung);
             this.panel.Controls.Add(this.txtMatKhau);
+            this.panel.Controls.Add(this.label5);
             this.panel.Controls.Add(this.txtTenDangNhap);
             this.panel.Controls.Add(this.label2);
             this.panel.Controls.Add(this.label1);
@@ -214,23 +214,22 @@
             this.panel.Size = new System.Drawing.Size(432, 153);
             this.panel.TabIndex = 20;
             // 
-            // label4
+            // txtLoaiNguoiDung
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(14, 48);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(114, 20);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Mã tài khoản: ";
+            this.txtLoaiNguoiDung.Location = new System.Drawing.Point(180, 111);
+            this.txtLoaiNguoiDung.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtLoaiNguoiDung.Name = "txtLoaiNguoiDung";
+            this.txtLoaiNguoiDung.Size = new System.Drawing.Size(221, 26);
+            this.txtLoaiNguoiDung.TabIndex = 31;
             // 
-            // txtMaTaiKhoan
+            // label5
             // 
-            this.txtMaTaiKhoan.Location = new System.Drawing.Point(180, 42);
-            this.txtMaTaiKhoan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtMaTaiKhoan.Name = "txtMaTaiKhoan";
-            this.txtMaTaiKhoan.ReadOnly = true;
-            this.txtMaTaiKhoan.Size = new System.Drawing.Size(221, 26);
-            this.txtMaTaiKhoan.TabIndex = 5;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(15, 111);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(127, 20);
+            this.label5.TabIndex = 30;
+            this.label5.Text = "Loại người dùng";
             // 
             // Form_TaiKhoan
             // 
@@ -274,7 +273,7 @@
         private System.Windows.Forms.TextBox txtTenDangNhap;
         private System.Windows.Forms.TextBox txtMatKhau;
         private System.Windows.Forms.Panel panel;
-        private System.Windows.Forms.TextBox txtMaTaiKhoan;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtLoaiNguoiDung;
+        private System.Windows.Forms.Label label5;
     }
 }

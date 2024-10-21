@@ -6,10 +6,11 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DataAccessLayer;
 
 namespace BusinessLogicLayer
 {
-    internal class DBHoaDonNhap
+    public class DBHoaDonNhap
     {
         DAL db = null;
         public DBHoaDonNhap()
@@ -22,15 +23,14 @@ namespace BusinessLogicLayer
             return db.ExecuteQueryDataSet("SELECT * FROM UDF_LayHoaDonNhap()", CommandType.Text);
         }
         //Thêm hóa đơn nhập
-        public bool ThemHoaDonNhap(ref string err, string mahoadonnhap, string ngaynhap, string manhanvien)
+        public bool ThemHoaDonNhap(ref string err, string ngaynhap, int manhanvien)
         {
             return db.MyExecuteNonQuery("USP_ThemHoaDonNhap", CommandType.StoredProcedure, ref err,
-                new SqlParameter("@ma_hoa_don_nhap", mahoadonnhap),
-                new SqlParameter("@ngay_nhap", DateTime.Parse(ngaynhap)),
-                new SqlParameter("@ma_nhan_vien", manhanvien));
+                new SqlParameter("@ngaylaphd", DateTime.Parse(ngaynhap)),
+                new SqlParameter("@manhanvien", manhanvien));
         }
         //Cập nhật hoá đơn nhập
-        public bool CapNhatHoaDonNhap(ref string err, string mahoadonnhap, string ngaynhap, string manhanvien)
+        public bool CapNhatHoaDonNhap(ref string err, int mahoadonnhap, string ngaynhap, int manhanvien)
         {
             return db.MyExecuteNonQuery("USP_CapNhatHoaDonNhap", CommandType.StoredProcedure, ref err,
                 new SqlParameter("@mahoadonnhap", mahoadonnhap),

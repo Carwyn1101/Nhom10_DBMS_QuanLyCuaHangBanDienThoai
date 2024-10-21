@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace BusinessLogicLayer
 {
-    internal class DBNganKe
+    public class DBNganKe
     {
         DAL db = null;
 
@@ -25,14 +25,13 @@ namespace BusinessLogicLayer
         // Load danh sách ngăn kệ, sức chứa, số lượng
         public DataSet NgankeSucchuaSoluong()
         {
-            return db.ExecuteQueryDataSet("USP_NgankeSucchuaSoluong", CommandType.StoredProcedure);
+            return db.ExecuteQueryDataSet("USP_TinhTrangNganKe", CommandType.StoredProcedure);
         }
         // Thêm ngăn kệ
-        public bool ThemNganKe(ref string err, string MaNganKe, string ViTri, int SucChua)
+        public bool ThemNganKe(ref string err,  string tennganke, int SucChua)
         {
             return db.MyExecuteNonQuery("USP_ThemNganKe", CommandType.StoredProcedure, ref err,
-                new SqlParameter("@MaNganKe", MaNganKe),
-                new SqlParameter("@ViTri", ViTri),
+                new SqlParameter("@TenNganKe", tennganke),
                 new SqlParameter("@SucChua", SucChua));
         }
         // Xoá ngăn kệ
@@ -42,11 +41,11 @@ namespace BusinessLogicLayer
                 new SqlParameter("@ma_ngan_ke", MaNganKe));
         }
         // Cập nhật ngăn kệ
-        public bool CapNhatNganKe(ref string err, string MaNganKe, string ViTri, int SucChua)
+        public bool CapNhatNganKe(ref string err, int MaNganKe, string tennganke, int SucChua)
         {
             return db.MyExecuteNonQuery("USP_CapNhatNganKe", CommandType.StoredProcedure, ref err,
                 new SqlParameter("@manganke", MaNganKe),
-                new SqlParameter("@vitri", ViTri),
+                new SqlParameter("@tennganke", tennganke),
                 new SqlParameter("@succhua", SucChua));
         }
     }
